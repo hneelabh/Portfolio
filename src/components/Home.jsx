@@ -19,13 +19,14 @@ const Home = () => {
   return (
     <div
       name='home'
-      className='relative w-full min-h-screen text-gray-300 flex items-center justify-center'
+      className='w-full min-h-screen text-gray-300 flex items-center justify-center relative px-6'
     >
       {/* Overlay for better readability */}
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
-
+  
       {/* Content Container */}
-      <div className='relative z-10 max-w-[1000px] mx-auto px-8 flex flex-col justify-center items-start h-full text-left'>
+      <div className='relative z-10 max-w-[1000px] w-full'>
+  
         <motion.p
           className='text-pink-600 text-lg'
           initial={{ opacity: 0, y: -50 }}
@@ -34,7 +35,7 @@ const Home = () => {
         >
           Hi, my name is
         </motion.p>
-
+  
         <motion.h1
           className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white'
           initial={{ opacity: 0, x: -50 }}
@@ -43,7 +44,7 @@ const Home = () => {
         >
           Harsh Neelabh
         </motion.h1>
-
+  
         <motion.h2
           className='text-2xl sm:text-3xl lg:text-5xl font-semibold text-gray-300 mt-2'
           initial={{ opacity: 0, x: 50 }}
@@ -53,16 +54,17 @@ const Home = () => {
           I'm a <span>{text}</span>
           <Cursor />
         </motion.h2>
-
+  
         <motion.p
           className='py-4 max-w-[700px] text-gray-400 text-base sm:text-lg'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
         >
-          I specialize in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on real-time systems that bridge software with hardware.
+          I specialize in building (and occasionally designing) exceptional digital experiences.
+          Currently, I'm focused on real-time systems that bridge software with hardware.
         </motion.p>
-
+  
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -77,9 +79,10 @@ const Home = () => {
             </button>
           </Link>
         </motion.div>
+  
       </div>
     </div>
-  )
+  )  
 }
 
 export default Home

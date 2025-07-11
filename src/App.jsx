@@ -6,7 +6,7 @@ import Work from "./components/Work"
 import Certificates from "./components/Certificates"
 import Contact from "./components/Contact"
 
-import bgWood from './assets/bg-wood.jpg' 
+import bgWood from './assets/bg.jpg' 
 
 import AOS from "aos";
 import 'aos/dist/aos.css';
