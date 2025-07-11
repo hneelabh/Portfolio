@@ -25,7 +25,7 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <ul className='hidden md:flex md:text-xs lg:text-sm'>
-        {['home', 'about', 'skills', 'work', 'experience', 'certificates', 'contact'].map(
+        {['home', 'about', 'experience', 'work', 'skills', 'certificates', 'contact'].map(
           (section, index) => (
             <li
               key={index}
@@ -50,7 +50,7 @@ const Navbar = () => {
           !nav ? 'hidden' : 'absolute'
         } top-0 right-0 w-[60%] h-screen opacity-80 bg-black rounded-l-xl text-gray-300 flex flex-col justify-center items-center z-10`}
       >
-        {['home', 'about', 'skills', 'work', 'experience', 'certificates', 'contact'].map(
+        {['home', 'about', 'experience', 'work', 'skills', 'certificates', 'contact'].map(
           (section, index) => (
             <li key={index} className='py-6 text-2xl'>
               <Link onClick={handleClick} to={section} smooth={true} duration={500}>

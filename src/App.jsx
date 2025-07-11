@@ -4,7 +4,7 @@ import About from "./components/About"
 import Skills from "./components/Skills"
 import Work from "./components/Work"
 import Certificates from "./components/Certificates"
-import Contact from "./Contact"
+import Contact from "./components/Contact"
 
 import bgWood from './assets/bg-wood.jpg' 
 
@@ -40,9 +40,9 @@ export default function App() {
       <Navbar />
       <Home />
       <About />
-      <Skills />
-      <Work />
       <Experiences />
+      <Work />
+      <Skills />
       <Certificates />
       <Contact />
     </div>

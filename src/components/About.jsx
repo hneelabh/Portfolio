@@ -1,37 +1,40 @@
 import React from 'react'
+import { FaTools } from 'react-icons/fa'
 
 const About = () => {
   return (
-     <div name='about' className='relative min-w-full h-screen text-gray-300 overflow-hidden'>
+    <div name='about' className='w-full min-h-screen text-gray-300 bg-black bg-opacity-60 flex items-center justify-center px-6'>
 
-      {/* Background Floating Blobs 
-      <div className="absolute top-[10%] left-[10%] w-[40vw] h-[40vw] bg-purple-700 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float-slow z-0"></div>
-      <div className="absolute top-[10%] right-[10%] w-[35vw] h-[35vw] bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float-fast z-0"></div>
-      <div className="absolute bottom-[10%] left-[5%] w-[30vw] h-[30vw] bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-float-slow z-0"></div>
-      <div className="absolute top-[20%] right-[15%] w-[25vw] h-[25vw] bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-float-fast z-0"></div>
-      <div className="absolute bottom-[5%] left-[20%] w-[20vw] h-[20vw] bg-green-400 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float-slow z-0"></div>*/}
+      <div className='max-w-[1000px] w-full'>
 
-      {/* Content Container */}
-      <div className='flex flex-col justify-center items-center w-full h-full bg-black bg-opacity-60'>
-        <div className='max-w-[1000px] w-full px-4 grid grid-cols-2 gap-8'>
-          <div className='sm:text-right pb-8 pl-4 z-10'>
-            <p className='text-4xl font-bold inline border-b-4 border-pink-600'>About</p>
-          </div>
-          <div></div>
+        {/* Heading */}
+        <div className='mb-6'>
+          <h2 className='text-3xl sm:text-4xl font-bold inline border-b-4 border-pink-600'>About Me</h2>
         </div>
 
-        <div className='max-w-[1000px] w-full px-4 grid sm:grid-cols-2 gap-8 z-10'>
-          <div className='sm:text-right text-3xl font-bold'>
-            <p>
-              Hi. I'm Harsh, nice to meet you. Please take a look around.
-            </p>
-          </div>
-          <div>
-            <p>
-              As a passionate full-stack web developer specializing in MERN, I bring creativity and precision to every project. With a keen eye for design and a knack for clean code, I craft engaging web experiences that captivate users. Let's collaborate to bring your vision to life with cutting-edge technology and intuitive design.
-            </p>
-          </div>
+        {/* Intro */}
+        <p className='text-2xl sm:text-3xl font-semibold mb-4 text-gray-300'>
+          Hi, I'm Harsh — great to have you here!
+        </p>
+
+        {/* Bio */}
+        <p className='text-base sm:text-lg mb-6 leading-relaxed text-white'>
+          I’m a passionate developer and engineer focused on crafting innovative, scalable solutions at the intersection of <span className='text-pink-500'>web, embedded systems, and AI</span>. My work involves building responsive full-stack applications, real-time embedded systems, and AI-driven tools to solve real-world challenges.
+        </p>
+
+        {/* Highlights */}
+        <div className='mt-8'>
+          <h3 className='text-xl sm:text-2xl font-bold flex items-center gap-2 mb-4'>
+            <FaTools className='text-pink-500' /> Recent Highlights
+          </h3>
+
+          <ul className='space-y-3 text-base sm:text-lg text-white'>
+            <li>⚡ Developed a <strong>FreeRTOS + Linux dual-guest OS ecosystem</strong> on Raspberry Pi at <strong>Visteon</strong>.</li>
+            <li>⚡ Created <strong>Charge IT</strong>, a real-time EV slot booking platform reducing wait times by 95%.</li>
+            <li>⚡ Integrated AI-powered chatbots using <strong>IBM Watsonx.ai</strong>, improving customer response times by 50%.</li>
+          </ul>
         </div>
+
       </div>
     </div>
   )

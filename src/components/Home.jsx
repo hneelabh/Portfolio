@@ -7,11 +7,9 @@ import { motion } from 'framer-motion'
 const Home = () => {
   const [text] = useTypewriter({
     words: [
-      'SWE Intern @Visteon',
-      'Final-Year IT Undergrad @ CUSAT',
-      'Full-Stack Web Developer',
-      'UI/UX Designer'
-
+      'Software Engineer @ Visteon',
+      '2025 IT Graduate @ CUSAT',
+      'Web & Embedded Systems Developer',
     ],
     loop: true,
     typeSpeed: 40,
@@ -62,7 +60,7 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
         >
-          I specialize in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on creating responsive full-stack web applications.
+          I specialize in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on real-time systems that bridge software with hardware.
         </motion.p>
 
         <motion.div
