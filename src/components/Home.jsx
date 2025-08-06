@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 const Home = () => {
   const [text] = useTypewriter({
     words: [
-      'Software Engineer @ Visteon',
+      'Software Engineer 1 @ Visteon',
       '2025 IT Graduate @ CUSAT',
       'Web & Embedded Systems Developer',
     ],

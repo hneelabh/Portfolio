@@ -5,7 +5,7 @@ import IBM from "../assets/Companies/ibm.jpg";
 function Experiences() {
   return (
 <div name='experience' className='relative w-full min-h-screen text-gray-300 bg-black bg-opacity-60 overflow-hidden'>
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+      <div className='max-w-[1000px] mx-auto flex flex-col justify-center w-full h-full'>
         <div className='pb-8 max-sm:px-6 z-10'>
           <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600 z-10'>
             Experience
@@ -16,7 +16,7 @@ function Experiences() {
           <div className="absolute w-2 h-full bg-gray-400 shadow-md inset-0 left-1/2 transform -translate-x-1/2"></div>
 
           <div className="flex flex-col sm:flex-row items-center z-10 p-2 w-full shadow-xl shadow-black ">
-            <img src={VISTEON} alt="IBM" className="max-w-40 p-5 mr-2 duration-500 md:mr-6" />
+            <img src={VISTEON} alt="Visteon" className="max-w-40 p-5 mr-2 duration-500 md:mr-6" />
             <div className="text-left w-full">
               <div className="bg-white text-[#EA9635] p-6 rounded-md shadow-md mx-auto w-full"
                 data-aos="fade-left" data-aos-duration="800" data-aos-once="false">
@@ -32,7 +32,7 @@ function Experiences() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center w-full z-10 p-2 pb-6 shadow-xl shadow-black">
-            <img src={IBM} alt="Softapper" className="max-w-40 p-5 pb-6 m-2 duration-500 md:order-2 md:ml-6" />
+            <img src={IBM} alt="IBM" className="max-w-40 p-5 pb-6 m-2 duration-500 md:order-2 md:ml-6" />
             <div className="text-left md:order-1 w-full">
               <div className="bg-white text-[#145EFF] p-6 rounded-md shadow-md mx-auto w-full"
                 data-aos="fade-right" data-aos-duration="800" data-aos-once="false">

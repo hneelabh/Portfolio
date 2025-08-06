@@ -3,19 +3,18 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import VotingSystem from '../assets/projects/votingsystem.png';
 import Dictionary from '../assets/projects/dictionary.png';
-import chargeit from '../assets/projects/chargeit1.png';
+import chargeit from '../assets/projects/chargeit.png';
 import packnchew from '../assets/projects/packnchew.png';
 import mycontacts from '../assets/projects/mycontacts.jpeg';
-import diversediaries from '../assets/projects/DiverseDiaries.jpg';
-
+import diversediaries from '../assets/projects/diversediaries.jpg';
+import taskmaster from '../assets/projects/taskmaster.png';
+import minigolf from '../assets/projects/minigolf.png'
 import { FaGithub } from "react-icons/fa";
 import { GrDeploy } from "react-icons/gr";
 
 const Work = () => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({
-    threshold: 0.1, // Trigger animation when 10% of the section is visible
-  });
+  const { ref, inView } = useInView({ threshold: 0.1 });
 
   React.useEffect(() => {
     if (inView) {
@@ -44,7 +43,7 @@ const Work = () => {
       title: "Charge IT",
       tech: "(React.js, Tailwind, Firebase, Flutter, Google Maps API)",
       desc: "Complete EV Solutions - Book, Charge, Rent and Drive!",
-      demo: "https://chargingit.netlify.app/",
+      demo: "https://charge-i-ts.vercel.app/",
       code: "https://www.github.com/hneelabh/ChargeIT"
     },
     {
@@ -70,6 +69,20 @@ const Work = () => {
       code: "https://www.github.com/hneelabh/Online_Voting_System"
     },
     {
+      img: minigolf,
+      title: "Mini Golf",
+      tech: "(Python)",
+      desc: "A small golf game built with python.",
+      code: "https://www.github.com/hneelabh/SuperMiniGolf"
+    },
+    {
+      img: taskmaster,
+      title: "Task Master",
+      tech: "(HTML, CSS, Flask, Sqlite)",
+      desc: "A flask web-app for storing the tasks to be done.",
+      code: "https://www.github.com/hneelabh/TaskMaster"
+    },
+    {
       img: mycontacts,
       title: "My Contacts",
       tech: "(Node.js, Express, MongoDB, JWT)",
@@ -87,24 +100,16 @@ const Work = () => {
   ];
 
   return (
-    <div name='work' className='relative w-full min-h-screen text-gray-300 overflow-hidden bg-black bg-opacity-60'>  
-    {/* Background Floating Blobs 
-    <div className="absolute top-[10%] left-[10%] w-[40vw] h-[40vw] bg-purple-700 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float-slow z-0"></div>
-    <div className="absolute top-[10%] right-[10%] w-[35vw] h-[35vw] bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float-fast z-0"></div>
-    <div className="absolute bottom-[10%] left-[5%] w-[30vw] h-[30vw] bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-float-slow z-0"></div>
-    <div className="absolute top-[20%] right-[15%] w-[25vw] h-[25vw] bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-float-fast z-0"></div>
-    <div className="absolute bottom-[5%] left-[20%] w-[20vw] h-[20vw] bg-green-400 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float-slow z-0"></div>*/}
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full max-md:px-10 z-10'>
-        <div className='pb-8 z-10'>
-          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600 z-10'>
-            Work
-          </p>
-          <p className='py-6'>Below is a showcase of some of my most accomplished works :</p>
+    <div name='work' className='relative w-full min-h-screen text-gray-300 overflow-hidden bg-black bg-opacity-60 px-6'>
+      <div className='max-w-[1000px] mx-auto px-4 py-8 flex flex-col justify-center w-full h-full z-10'>
+        <div className='pb-8'>
+          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>Work</p>
+          <p className='py-6'>Below is a showcase of some of my most accomplished works:</p>
         </div>
 
         <motion.div
           ref={ref}
-          className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 z-10'
+          className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 z-10'
           variants={containerVariants}
           initial="hidden"
           animate={controls}
@@ -112,29 +117,33 @@ const Work = () => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              style={{ backgroundImage: `url(${project.img})` }}
-              className='shadow-xl shadow-black group container rounded-md flex justify-center items-center mx-auto content-div transform'
+              className='relative aspect-square shadow-xl shadow-black group container rounded-md flex justify-center items-center mx-auto overflow-hidden'
+              style={{
+                backgroundImage: `url(${project.img})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
             >
-              <div className='opacity-0 group-hover:opacity-100'>
-                <div className='text-2xl md:text-xl font-bold text-white text-center tracking-wider'>
+              <div className='absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-3 sm:p-4'>
+                <div className='text-sm sm:text-base md:text-lg font-bold text-white tracking-wider mb-1'>
                   {project.title}
                 </div>
-                <div className="text-center text-xs pb-2">{project.tech}</div>
-                <div className="text-center text-s md:text-xs italic">{project.desc}</div>
+                <div className="text-[0.6rem] sm:text-xs md:text-sm pb-1">{project.tech}</div>
+                <div className="text-[0.6rem] sm:text-xs italic">{project.desc}</div>
 
-                <div className='pt-8 text-center flex justify-center items-center'>
+                <div className='pt-3 flex justify-center items-center flex-wrap'>
                   {project.demo && (
                     <a href={project.demo} target='_blank' rel='noopener noreferrer'>
-                      <button className='text-center rounded-xl px-3 py-2 m-2 bg-white text-gray-700 font-bold text-lg flex items-center hover:scale-95 duration-300'>
-                        <GrDeploy className='mr-2' />Demo
+                      <button className='text-center rounded-xl px-2 py-1 m-1 bg-white text-gray-700 font-bold text-xs flex items-center hover:scale-95 duration-300'>
+                        <GrDeploy className='mr-1' />Demo
                       </button>
                     </a>
                   )}
                   <a href={project.code} target='_blank' rel='noopener noreferrer'>
-                    <button className='text-center rounded-xl px-3 py-2 m-2 bg-white text-gray-700 font-bold text-lg flex items-center hover:scale-95 duration-300'>
-                      <FaGithub className='mr-2' />Code
+                    <button className='text-center rounded-xl px-2 py-1 m-1 bg-white text-gray-700 font-bold text-xs flex items-center hover:scale-95 duration-300'>
+                      <FaGithub className='mr-1' />Code
                     </button>
                   </a>
                 </div>
@@ -145,6 +154,6 @@ const Work = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Work;
